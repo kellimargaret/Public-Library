@@ -67,3 +67,11 @@ Book.destroy = function(isbn) {
     console.log("There is no book with ISBN " + isbn + " in the database!");
   }
 };
+
+//Test data
+Book.createTestData = function() {
+  Book.instances["006251587X"] = new Book({isbn:"006251587X", title:"Weaving the Web", year:2000});
+  Book.instances["0465026567"] = new Book({isbn:"0465026567", title:"G&ouml;del, Escher, Bach", year:1999});
+  Book.instances["0465030793"] = new Book({isbn:"0465030793", title:"I Am A Strange Loop", year:2008});
+  Book.saveAll();
+};
