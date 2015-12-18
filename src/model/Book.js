@@ -57,3 +57,13 @@ Book.update = function(slots) {
   }
   console.log("Book " + slots.isbn + " modified!");
 };
+
+//Delete an existing Book instance
+Book.destroy = function(isbn) {
+  if(Book.instances[isbn]) {
+    console.log("Book " + isbn + " deleted");
+    delete Book.instances[isbn];
+  } else {
+    console.log("There is no book with ISBN " + isbn + " in the database!");
+  }
+};
