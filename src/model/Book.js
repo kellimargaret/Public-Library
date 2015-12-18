@@ -45,3 +45,15 @@ Book.add = function(slots) {
   var book = new Book(slots);
   console.log("Book " + slots.isbn + " created!");
 };
+
+//Updating an existing Book instances
+Book.update = function(slots) {
+  var book = Book.instances[slots.isbn];
+  var year = parseInt(slots.year);
+  if(book.title !== slots.title) {
+    book.title = slots.title;
+  } if(book.year !== year) {
+    book.year = year;
+  }
+  console.log("Book " + slots.isbn + " modified!");
+};
