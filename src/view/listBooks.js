@@ -1,5 +1,5 @@
 pl.view.listBooks = {
-  setUserInterface: function() {
+  setupUserInterface: function() {
     var tableBodyEl = document.querySelector("table#books>tbody");
     var i=0, keys=[], key="", row={};
     //load all book objects

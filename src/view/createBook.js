@@ -1,5 +1,5 @@
 pl.view.createBook = {
-  setUserInterface: function() {
+  setupUserInterface: function() {
     var saveButton = document.forms['Book'].commit;
     //load all book objects
     Book.loadAll();
