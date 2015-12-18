@@ -39,3 +39,9 @@ Book.saveAll = function() {
   }
   if (!error) console.log( nmrOfBooks + " books saved.");
 };
+
+//Create a new Book instance
+Book.add = function(slots) {
+  var book = new Book(slots);
+  console.log("Book " + slots.isbn + " created!");
+};
