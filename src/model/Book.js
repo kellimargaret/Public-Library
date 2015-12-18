@@ -4,6 +4,7 @@ function Book ( slots) {
   this.year = slots.year;
 };
 
+// Load all Book Instances
 Book.loadAll = function() {
   var i=0, key="", keys=[], bookTableString="", bookTable={};
   try {
@@ -22,4 +23,19 @@ Book.loadAll = function() {
       Book.instance[key] = Book.convertRow20bj ( bookTable[key]);
     }
   }
+};
+
+//Save all Book Instances
+Book.saveAll = function() {
+  var bookTableString = "", error=false,
+    nmrOfBooks = Object.keys ( Book.instances).length;
+  try {
+    bookTableString = JSON.stringify( Book.instances);
+    localStorage["bookTable"]
+ = bookTableString;
+  } catch (e) {
+    alert("Error when writing to Local Storage\n" + e);
+    error = true;
+  }
+  if (!error) console.log( nmrOfBooks + " books saved.");
 };
