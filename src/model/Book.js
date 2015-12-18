@@ -75,3 +75,11 @@ Book.createTestData = function() {
   Book.instances["0465030793"] = new Book({isbn:"0465030793", title:"I Am A Strange Loop", year:2008});
   Book.saveAll();
 };
+
+
+//Clear all data
+Book.clearData = function() {
+  if(confirm("Do you really want to delete all book data?")) {
+    localStorage["bookTable"] = "{}";
+  }
+};
