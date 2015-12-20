@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Minimal JS Front-End App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css" rel="stylesheet">
     <script src="src/ctrl/initialize.js"></script>
     <script src="src/model/Book.js"></script>
     <script src="src/view/createBook.js"></script>
@@ -11,15 +13,21 @@
     </script>
   </head>
   <body>
-    <h1>Public Library: Create a new book record</h1>
-    <form id="Book">
-      <p><label>ISBN: <input name="isbn" /></label></p>
-      <p><label>Title: <input name="title" /></label></p>
-      <p><label>Year: <input name="year" /></label></p>
-      <p><button type="button" name="commit">Save</button></p>
-    </form>
-    <nav>
-      <a href="index.html">Back to main menu</a>
-    </nav>
+    <div class="container">
+      <h1 class="text-center">Public Library: Create a new book record</h1>
+      <form id="Book">
+        <div class="form-group form-inline">
+          <div class="text-center">
+            <p><label>ISBN: <input class="form-control" placeholder="HERE" name="isbn" /></label></p>
+            <p><label>Title: <input class="form-control" placeholder="HERE" name="title" /></label></p>
+            <p><label>Year: <input class="form-control" placeholder="HERE" name="year" /></label></p>
+            <p><button type="button" name="commit" class="btn btn-default">Save</button></p>
+          </div>
+        </div>
+      </form>
+      <nav>
+        <a href="index.html">Back to main menu</a>
+      </nav>
+    </div>
   </body>
 </html>
