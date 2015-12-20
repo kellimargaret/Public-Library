@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="utf-8">
     <title>Minimal JS Front-End App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
     <script src="src/model/Book.js"></script>
   </head>
   <body>
-    <h1>Public Library</h1>
-    <h2>An Example of a Minimal JavaScript front-end App</h2>
-    <p>THis app supports the following opterations:</p>
-    <menu>
-      <li><a href="listBooks.html"><button type="button">List all books</button></a></li>
-      <li><a href="createBook.html"><button type="button">Add a new book</button></a></li>
-      <li><a href="updateBook.html"><button type="button">Update a book</button></a></li>
-      <li><a href="deleteBook.html"><button type="button">Delete a book</button></a></li>
-      <li><button type="button" onclick="Book.clearData()">Clear database</button></li>
-      <li><button type="button" onclick="Book.createTestData()">Create a test data</button></li>
-    </menu>
+    <div class="container">
+      <h1 class="text-center">Public Library</h1>
+      <div class="col-xs-12 col-md-8">
+        <h2>An Example of a Minimal JavaScript front-end App</h2>
+        <p class="lead">This app supports the following opterations:</p>
+        <menu>
+          <li><a href="listBooks.html"><button type="button">List all books</button></a></li>
+          <li><a href="createBook.html"><button type="button">Add a new book</button></a></li>
+          <li><a href="updateBook.html"><button type="button">Update a book</button></a></li>
+          <li><a href="deleteBook.html"><button type="button">Delete a book</button></a></li>
+          <li><button type="button" onclick="Book.clearData()">Clear database</button></li>
+          <li><button type="button" onclick="Book.createTestData()">Create a test data</button></li>
+        </menu>
+      </div>
+    </div>
   </body>
 </html>
